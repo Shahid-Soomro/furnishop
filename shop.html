@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Furni </title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+<!-- =====================================
+     HEADER
+====================================== -->
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="index.html" class="logo">
+            Luxe<span>Cart</span>
+        </a>
+
+        <nav class="navbar">
+
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button id="themeToggle" class="icon-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <button class="icon-btn wishlist-btn">
+                <i class="far fa-heart"></i>
+                <span class="wishlist-count">0</span>
+            </button>
+
+            <button id="cartBtn" class="icon-btn cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </button>
+
+            <button id="menuBtn" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- =====================================
+     MOBILE MENU
+====================================== -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button id="closeMenu" class="close-menu">
+        <i class="fas fa-times"></i>
+    </button>
+
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+
+</div>
+
+<div id="overlay" class="overlay"></div>
+
+<!-- =====================================
+     SHOP HERO
+====================================== -->
+
+<section class="shop-banner">
+
+    <div class="container">
+
+        <div class="shop-banner-content">
+
+            <span>Premium Collection</span>
+
+            <h1>
+                Discover Luxury Furniture
+            </h1>
+
+            <p>
+                Browse our premium collection of
+                modern furniture and home decor.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     SHOP TOOLBAR
+====================================== -->
+
+<section class="shop-toolbar">
+
+    <div class="container">
+
+        <div class="toolbar-wrapper">
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products...">
+
+            </div>
+
+            <!-- Category -->
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="chair">
+                    Chairs
+                </option>
+
+                <option value="sofa">
+                    Sofas
+                </option>
+
+                <option value="table">
+                    Tables
+                </option>
+
+                <option value="decor">
+                    Decor
+                </option>
+
+            </select>
+
+            <!-- Sort -->
+
+            <select id="sortFilter">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="low">
+                    Price Low To High
+                </option>
+
+                <option value="high">
+                    Price High To Low
+                </option>
+
+                <option value="rating">
+                    Top Rated
+                </option>
+
+            </select>
+
+            <!-- Product Counter -->
+
+            <div class="product-count">
+
+                Products:
+                <span id="productCount">
+                    0
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     PRODUCTS SECTION
+====================================== -->
+
+<section class="products-section">
+
+    <div class="container">
+
+        <div
+        id="productsContainer"
+        class="products-grid">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     QUICK VIEW MODAL
+====================================== -->
+
+<div
+id="quickViewModal"
+class="quick-view-modal">
+
+    <div class="modal-content">
+
+        <button
+        id="closeModal"
+        class="close-modal">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+        <div id="modalBody">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================
+     CART SIDEBAR
+====================================== -->
+
+<div
+id="cartSidebar"
+class="cart-sidebar">
+
+    <div class="cart-header">
+
+        <h2>Shopping Cart</h2>
+
+        <button
+        id="closeCartBtn">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+    </div>
+
+    <div
+    id="cartItems"
+    class="cart-items">
+
+    </div>
+
+    <div class="cart-footer">
+
+        <h3>
+
+            Total:
+            $<span id="cartTotal">
+                0
+            </span>
+
+        </h3>
+
+        <button
+        class="checkout-btn">
+
+            Checkout
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =====================================
+     TOAST CONTAINER
+====================================== -->
+
+<div
+class="toast-container">
+
+</div>
+
+<!-- =====================================
+     JS FILES
+====================================== -->
+
+<script src="js/script.js"></script>
+<script src="js/shop.js"></script>
+
+</body>
+</html>
+
+<!-- =====================================
+     PRODUCT TEMPLATE INFO
+====================================== -->
+
+<section class="shop-info">
+
+    <div class="container">
+
+        <div class="shop-features">
+
+            <div class="shop-feature">
+
+                <i class="fas fa-truck"></i>
+
+                <h3>Free Shipping</h3>
+
+                <p>
+                    Free delivery on orders over $100
+                </p>
+
+            </div>
+
+            <div class="shop-feature">
+
+                <i class="fas fa-shield-alt"></i>
+
+                <h3>Secure Payment</h3>
+
+                <p>
+                    100% protected payment system
+                </p>
+
+            </div>
+
+            <div class="shop-feature">
+
+                <i class="fas fa-undo"></i>
+
+                <h3>Easy Returns</h3>
+
+                <p>
+                    30 day return guarantee
+                </p>
+
+            </div>
+
+            <div class="shop-feature">
+
+                <i class="fas fa-headset"></i>
+
+                <h3>24/7 Support</h3>
+
+                <p>
+                    Dedicated customer support
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+const products = [
+
+{
+id:1,
+name:"Nordic Chair",
+category:"chair",
+price:89,
+rating:4.8,
+badge:"New",
+image:"https://images.unsplash.com/photo-1582582429416-cf45b4f5d90d?w=800"
+},
+
+{
+id:2,
+name:"Luxury Sofa",
+category:"sofa",
+price:199,
+rating:4.9,
+badge:"Sale",
+image:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800"
+},
+
+{
+id:3,
+name:"Wood Table",
+category:"table",
+price:129,
+rating:4.7,
+badge:"Hot",
+image:"https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800"
+},
+
+{
+id:4,
+name:"Premium Decor",
+category:"decor",
+price:149,
+rating:4.6,
+badge:"New",
+image:"https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800"
+},
+
+{
+id:5,
+name:"Office Chair",
+category:"chair",
+price:119,
+rating:4.8,
+badge:"Best",
+image:"https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800"
+},
+
+{
+id:6,
+name:"Modern Sofa",
+category:"sofa",
+price:249,
+rating:4.9,
+badge:"Sale",
+image:"https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800"
+},
+
+{
+id:7,
+name:"Coffee Table",
+category:"table",
+price:99,
+rating:4.7,
+badge:"Hot",
+image:"https://images.unsplash.com/photo-1538688423619-a81d3f23454b?w=800"
+},
+
+{
+id:8,
+name:"Wall Decor",
+category:"decor",
+price:79,
+rating:4.5,
+badge:"New",
+image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800"
+},
+
+{
+id:9,
+name:"Royal Chair",
+category:"chair",
+price:139,
+rating:5.0,
+badge:"Premium",
+image:"https://images.unsplash.com/photo-1577140917170-285929fb55b7?w=800"
+},
+
+{
+id:10,
+name:"Luxury Couch",
+category:"sofa",
+price:299,
+rating:4.9,
+badge:"Best",
+image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800"
+},
+
+{
+id:11,
+name:"Dining Table",
+category:"table",
+price:189,
+rating:4.8,
+badge:"Hot",
+image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800"
+},
+
+{
+id:12,
+name:"Art Decor",
+category:"decor",
+price:69,
+rating:4.6,
+badge:"New",
+image:"https://images.unsplash.com/photo-1494526585095-c41746248156?w=800"
+}
+
+];

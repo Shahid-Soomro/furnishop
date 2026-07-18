@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furni| Premium Furniture Store</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href=".style.css">
+</head>
+<body>
+
+<!-- =========================
+     HEADER START
+========================= -->
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="#" class="logo">
+            Furn<span>i</span>
+        </a>
+
+        <nav class="navbar" id="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <!-- Search -->
+            <button class="icon-btn">
+                <i class="fas fa-search"></i>
+            </button>
+
+            <!-- Dark Mode -->
+            <button id="themeToggle" class="icon-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <!-- Wishlist -->
+            <button class="icon-btn">
+                <i class="far fa-heart"></i>
+            </button>
+
+            <!-- Cart -->
+            <button class="icon-btn cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </button>
+
+            <!-- Mobile Toggle -->
+            <button id="menuBtn" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- =========================
+     MOBILE MENU
+========================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button class="close-menu" id="closeMenu">
+        <i class="fas fa-times"></i>
+    </button>
+
+    <a href="#">Home</a>
+    <a href="#products">Shop</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                Premium Collection 2026
+            </span>
+
+            <h1>
+                Modern Interior
+                Design Studio
+            </h1>
+
+            <p>
+                Discover premium furniture and luxury
+                home decor designed for comfort,
+                elegance and modern living.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="btn primary-btn">
+                    Shop Now
+                </a>
+
+                <a href="#services" class="btn secondary-btn">
+                    Explore More
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200"
+            alt="Luxury Furniture">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FEATURED PRODUCTS START
+========================= -->
+
+<section id="products" class="featured-products">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Featured Products</span>
+
+            <h2>
+                Crafted With Premium Material
+            </h2>
+
+            <p>
+                Luxury furniture collection designed
+                to elevate your living space.
+            </p>
+
+        </div>
+
+        <div class="products-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1582582429416-cf45b4f5d90d?w=800"
+                    alt="Chair">
+
+                    <span class="product-badge">
+                        New
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Nordic Chair</h3>
+
+                    <p>$89.00</p>
+
+                    <button class="add-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800"
+                    alt="Sofa">
+
+                    <span class="product-badge sale">
+                        Sale
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Luxury Sofa</h3>
+
+                    <p>$199.00</p>
+
+                    <button class="add-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800"
+                    alt="Table">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Wood Table</h3>
+
+                    <p>$129.00</p>
+
+                    <button class="add-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800"
+                    alt="Furniture">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Premium Decor</h3>
+
+                    <p>$149.00</p>
+
+                    <button class="add-cart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section id="services" class="why-us">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Why Choose Us</span>
+            <h2>Designed For Modern Living</h2>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <i class="fas fa-truck"></i>
+                <h3>Fast Delivery</h3>
+                <p>
+                    Quick and secure delivery on every order.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-couch"></i>
+                <h3>Premium Quality</h3>
+                <p>
+                    Crafted using premium materials and finishes.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Warranty</h3>
+                <p>
+                    Quality assurance with product warranty.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>
+                    Dedicated customer support anytime.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     TESTIMONIALS
+========================= -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Testimonials</span>
+            <h2>What Our Customers Say</h2>
+        </div>
+
+        <div class="testimonial-wrapper">
+
+            <div class="testimonial-card">
+
+                <img src="https://i.pravatar.cc/100?img=1" alt="">
+
+                <p>
+                    Amazing quality furniture. Delivery was fast and the
+                    product exceeded expectations.
+                </p>
+
+                <h4>Michael Smith</h4>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <img src="https://i.pravatar.cc/100?img=5" alt="">
+
+                <p>
+                    Beautiful designs and premium finishing. Highly recommended.
+                </p>
+
+                <h4>Sarah Johnson</h4>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <img src="https://i.pravatar.cc/100?img=8" alt="">
+
+                <p>
+                    Excellent customer service and quality products.
+                </p>
+
+                <h4>David Wilson</h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     BLOG SECTION
+========================= -->
+
+<section id="blog" class="blog-section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Latest Blog</span>
+            <h2>Interior Design Insights</h2>
+        </div>
+
+        <div class="blog-grid">
+
+            <div class="blog-card">
+
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1000" alt="">
+
+                <div class="blog-content">
+
+                    <h3>
+                        Modern Living Room Trends 2026
+                    </h3>
+
+                    <a href="#">
+                        Read More
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000" alt="">
+
+                <div class="blog-content">
+
+                    <h3>
+                        Choosing The Perfect Furniture
+                    </h3>
+
+                    <a href="#">
+                        Read More
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+
+                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1000" alt="">
+
+                <div class="blog-content">
+
+                    <h3>
+                        Luxury Home Decoration Guide
+                    </h3>
+
+                    <a href="#">
+                        Read More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="newsletter">
+
+    <div class="container newsletter-content">
+
+        <div>
+            <h2>Subscribe Newsletter</h2>
+            <p>
+                Get latest products and exclusive offers.
+            </p>
+        </div>
+
+        <form class="newsletter-form">
+
+            <input
+            type="email"
+            placeholder="Enter your email">
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer id="contact" class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h2>Furni</h2>
+
+                <p>
+                    Premium furniture and luxury interior
+                    solutions for modern homes.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Support</h3>
+
+                <ul>
+
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>Email: support@Furni.com</p>
+                <p>Phone: +92 300 1234567</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Furni. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- =========================
+     SCROLL TOP BUTTON
+========================= -->
+
+<button id="scrollTopBtn" class="scroll-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+<!-- =========================
+     MAIN JS
+========================= -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
